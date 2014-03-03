@@ -1,4 +1,4 @@
-Autodesk_Vault_2014_PowerPack_for_PowerGUI
+Autodesk Vault 2014 PowerPack for PowerGUI
 ==========================================
 
 Introduction
@@ -36,10 +36,10 @@ Customization
 =============
 Launch PowerGUI Administrative Console (Authoring Mode) from Start menu to edit PowerPack.
 
--- 
+Contacts
+========
 Kind regards, Dmitry Yemelyanov aka MiWa NiZa
 mailto:miwaniza@gmail.com
 skype:miwa.niza
-cell: +38 (050) 56-888-36 (MTS UA)
 blog[EN]:zippybytes.blogspot.com
 blog[RU]:vault-ru.blogspot.com
