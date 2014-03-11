@@ -39,7 +39,7 @@ Launch PowerGUI Administrative Console (Authoring Mode) from Start menu to edit 
 Contacts
 ========
 Kind regards, Dmitry Yemelyanov aka MiWa NiZa
-mailto:miwaniza@gmail.com
-skype:miwa.niza
-blog[EN]:zippybytes.blogspot.com
-blog[RU]:vault-ru.blogspot.com
+* mailto:miwaniza@gmail.com
+* skype:miwa.niza
+* blog[EN]:http://zippybytes.blogspot.com
+* blog[RU]:http://vault-ru.blogspot.com
