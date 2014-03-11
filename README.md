@@ -5,7 +5,10 @@ Introduction
 ============
 If you're Autodesk Vault administrator, your life probably will become more comfortable: the pack of PowerShell scripts is coming! With them you'll be able to work with Vault server just with installed SDK and PowerShell.
 For more easy controlling and editing this pack you're invited to do this from [PowerGUI](http://powergui.org/).
+
 Of course, not a lots and lots of tools, but fullness is directly corresponding with [Autodesk Vault Programmer's Cookbook](http://zippybytes.blogspot.ru/2014/02/autodesk-vault-programmers-cookbook-toc.html) and your feedback and suggestions.
+
+Visit [Autodesk Vault 2014 Powerpack for PowerGUI](http://powergui.org/entry.jspa?externalID=4131) at PowerGUI web-site.
 
 System requirements
 ===================
