@@ -6,20 +6,19 @@ $rates = $xml.Envelope.Cube.Cube.Cube
 $usd = $rates | Where-Object { $_.currency -eq 'USD' } | 
 Select-Object -ExpandProperty rate
 
-	$ceDef=$g_login.WebServiceManager.CustomEntityService.GetAllCustomEntityDefinitions() | Where-Object{$_.DispName -eq $cEntityDefinition}
-	if(!$ceDef)	{"Create _"+$cEntityDefinition+"_ custom object definition";Break}
-	
-$Ce=$g_login.WebServiceManager.CustomEntityService.AddCustomEntity($ceDef.Id, $date)
+$ceDef=$g_login.WebServiceManager.CustomEntityService.GetAllCustomEntityDefinitions() | Where-Object{$_.DispName -eq $cEntityDefinition}
+if(!$ceDef)	{"Create _"+$cEntityDefinition+"_ custom object definition";Break}
 $CeDescr = $g_login.WebServiceManager.PropertyService.GetPropertyDefinitionInfosByEntityClassId("CUSTENT",$null) | Where-Object{$_.PropDef.DispName -eq $CeDescrName}
-$CeValue = $g_login.WebServiceManager.PropertyService.GetPropertyDefinitionInfosByEntityClassId("CUSTENT",$null) | Where-Object{$_.PropDef.DispName -eq $CeValueName}
 if(!$CeDescr)	{"Create _"+$CeDescrName+"_ property definition";Break}
+$CeValue = $g_login.WebServiceManager.PropertyService.GetPropertyDefinitionInfosByEntityClassId("CUSTENT",$null) | Where-Object{$_.PropDef.DispName -eq $CeValueName}
 if(!$CeValue)	{"Create _"+$CeValueName+"_ property definition";Break}
+$Ce=$g_login.WebServiceManager.CustomEntityService.AddCustomEntity($ceDef.Id, $date)
 $g_login.WebServiceManager.CustomEntityService.UpdateCustomEntityProperties($Ce.Id,$ceDescr.PropDef.Id,"EUR-USD")
 $g_login.WebServiceManager.CustomEntityService.UpdateCustomEntityProperties($Ce.Id,$ceValue.PropDef.Id,$usd)
 }
 
 $cEntityDefinition = "Exchange rate"
-$CeDescrName="Decription"
+$CeDescrName="Description"
 $CeValueName="Value"
 if ($g_login -eq $null)
 	{Add-Type -Path "c:\Program Files (x86)\Autodesk\Autodesk Vault 2014 SDK\bin\Autodesk.DataManagement.Client.Framework.Vault.Forms.dll"
